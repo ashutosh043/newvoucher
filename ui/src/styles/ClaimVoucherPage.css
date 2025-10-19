@@ -1,0 +1,49 @@
+/* Container for the voucher section */
+.voucher-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  background: #fff;
+  min-height: 70vh;
+}
+
+/* Styled card box */
+.voucher-card {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgb(0, 140, 255);
+  font-family: 'Inter', sans-serif;
+}
+
+/* Button styling */
+.voucher-card button {
+  background-color: rgb(0, 140, 255);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.voucher-card button:hover {
+  background-color: rgb(0, 120, 230);
+}
+
+/* Voucher text details */
+.voucher-details {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #333;
+}
+
+.voucher-details p {
+  margin: 6px 0;
+}

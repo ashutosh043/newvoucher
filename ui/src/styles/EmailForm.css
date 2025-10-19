@@ -1,0 +1,27 @@
+.email-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.email-form input {
+  width: 60%;
+  padding: 0.7rem;
+  margin: 0.5rem 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.email-form button {
+  padding: 0.7rem 1.5rem;
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.email-form button:hover {
+  background-color: #1976d2;
+}

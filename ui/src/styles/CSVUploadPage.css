@@ -1,0 +1,27 @@
+.csv-upload-page {
+  padding: 2rem;
+  text-align: center;
+}
+
+.csv-upload-page h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.csv-upload-page input[type="file"] {
+  margin: 1rem 0;
+}
+
+.csv-upload-page button {
+  padding: 0.7rem 1.5rem;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.csv-upload-page button:hover {
+  background-color: #45a049;
+}

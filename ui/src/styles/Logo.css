@@ -1,0 +1,35 @@
+.logo-container {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+}
+
+.college-logo {
+  height: 65px;
+  margin-left: 7px;
+  cursor: pointer;
+  transition: height 0.3s ease; /* smooth resize */
+}
+
+/* Tablet screens */
+@media (max-width: 1024px) {
+  .college-logo {
+    height: 55px;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+  .college-logo {
+    height: 45px;
+  }
+}
+
+/* Small mobile screens */
+@media (max-width: 480px) {
+  .college-logo {
+    height: 35px;
+    margin-left: 4px;
+  }
+}
