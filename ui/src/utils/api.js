@@ -4,7 +4,7 @@ import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router-dom';
 
 const api = axios.create({
-  baseURL: 'http://localhost:5000/api', // Change if needed
+  baseURL: 'https://newvoucher1.onrender.com/api', // Change if needed
   withCredentials: true, // Important for refreshToken cookies
 });
 
@@ -27,7 +27,7 @@ api.interceptors.response.use(
       originalRequest._retry = true;
       try {
         const res = await axios.post(
-          'http://localhost:5000/api/auth/refresh-token',
+          'https://newvoucher1.onrender.com/api/auth/refresh-token',
           {},
           { withCredentials: true }
         );

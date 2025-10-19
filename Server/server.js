@@ -15,7 +15,8 @@ const app = express();
 
 // Middleware
 app.use(cors({
-    origin: 'http://localhost:5173',
+  //  origin: 'http://localhost:5173',
+  origin: 'https://newvoucher.onrender.com/',
     credentials: true // ✅ Needed to send/receive cookies
 }));
 app.use(express.json());

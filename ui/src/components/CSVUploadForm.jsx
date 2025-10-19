@@ -20,7 +20,7 @@ export default function CSVUploadForm({ wifiType }) {
       const csvData = e.target.result;
 
       try {
-        const response = await axios.post('http://localhost:5000/api/admin/upload', {
+        const response = await axios.post('https://newvoucher1.onrender.com/api/admin/upload', {
           csvData,
           wifiType
         });
