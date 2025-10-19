@@ -14,11 +14,37 @@ const userRoutes = require('./routes/userRoute');
 const app = express();
 
 // Middleware
-app.use(cors({
+// app.use(cors({
   //  origin: 'http://localhost:5173',
-  origin: 'https://newvoucher.onrender.com',
-    credentials: true // ✅ Needed to send/receive cookies
+  // origin: 'https://newvoucher.onrender.com',
+  //  credentials: true // ✅ Needed to send/receive cookies
+// }));
+
+const allowedOrigins = [
+  'https://newvoucher.onrender.com',           
+  'http://localhost:5173'            
+];
+
+app.use(cors({
+  origin: function (origin, callback) {
+    // Allow requests with no origin (e.g., mobile apps, curl)
+    if (!origin) return callback(null, true);
+
+    if (allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    } else {
+      return callback(new Error('Not allowed by CORS: ' + origin), false);
+    }
+  },
+  credentials: true,
 }));
+
+// Handle preflight requests globally
+app.options('*', cors({
+  origin: allowedOrigins,
+  credentials: true,
+}));
+
 app.use(express.json());
 app.use(cookieParser());
 app.use(fileUpload());
